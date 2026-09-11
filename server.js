@@ -4,7 +4,6 @@ const db = require("./db");
 const express = require("express");
 
 const app = express();
-
 app.use(express.json());
 
 console.log(
@@ -19,7 +18,7 @@ app.get("/", (req, res) => {
 
 
 // Convert Currency
-app.get("/api/convert", async (req, res) => {
+app.get("/api/", async (req, res) => {
     const amount = Number(req.query.amount);
     const from = req.query.from;
     const to = req.query.to;
